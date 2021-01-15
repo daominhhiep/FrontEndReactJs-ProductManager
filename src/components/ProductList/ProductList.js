@@ -8,11 +8,10 @@ class ProductList extends Component {
                     <h3 className="card-title">List</h3>
                 </div>
                 <div className="card-body">
-                    <table className="table table-striped table-hover">
-                        <thead>
+                    <table className="table table-bordered table-hover">
+                        <thead className="table-dark">
                         <tr>
                             <th>STT</th>
-                            <th>ID</th>
                             <th>NAME</th>
                             <th>PRICE</th>
                             <th>STATUS</th>

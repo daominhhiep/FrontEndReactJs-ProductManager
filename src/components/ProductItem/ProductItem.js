@@ -9,14 +9,13 @@ class ProductItem extends Component {
         return (
             <tr>
                 <th>{index + 1}</th>
-                <th>{product.id}</th>
                 <th>{product.name}</th>
                 <th>{product.price}</th>
                 <th>
                     <span className={`badge rounded-pill ${statusClass}`}>{statusName}</span>
                 </th>
                 <th>
-                    <Link to={`/product/${product.id}/edit`} className="btn btn-primary"> Edit</Link>
+                    <Link to={`/product/${product.id}/edit`} className="btn btn-warning"> Edit</Link>
                 </th>
                 <th>
                     <button type="button" className="btn btn-danger" onClick={() => this.onDelete(product.id)}>Delete
