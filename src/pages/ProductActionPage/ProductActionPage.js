@@ -6,7 +6,6 @@ class ProductActionPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            id: 1,
             txtName: '',
             txtPrice: '',
             chkbStatus: ''
@@ -42,6 +41,8 @@ class ProductActionPage extends Component {
         e.preventDefault();
         let {id, txtName, txtPrice} = this.state;
         let {history} = this.props;
+        // console.log('check')
+        // console.log(id)
         if (id) {
             callApi(`product/${id}`, 'PUT', {
                 id: id,
@@ -67,7 +68,7 @@ class ProductActionPage extends Component {
     }
 
     render() {
-        let {txtName, txtPrice, chkbStatus} = this.state;
+        let {txtName, txtPrice} = this.state;
 
         return (
             <div className="container">

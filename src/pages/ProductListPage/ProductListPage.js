@@ -16,9 +16,12 @@ class ProductListPage extends Component {
 
     componentDidMount() {
         callApi('products', 'GET', null).then(res => {
+            console.log(res)
             this.setState({
                 products: res.data,
             });
+        }).catch(err => {
+            console.error(err)
         });
     }
 
